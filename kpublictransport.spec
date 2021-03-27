@@ -1,12 +1,12 @@
 %define major %(echo %{version} |cut -d. -f1)
-%define libname %mklibname KPublicTransport %{major}
+%define libname %mklibname KPublicTransport
 %define devname %mklibname -d KPublicTransport
 
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Library for reading public transport information
 Name:		kpublictransport
 Version:	21.03.80
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://kde.org/
@@ -26,6 +26,8 @@ Public transport application for Plasma
 %package -n %{libname}
 Summary:	Library for reading public transport information
 Group:		System/Libraries
+%rename %mklibname KPublicTransport 20
+%rename %mklibname KPublicTransport 21
 
 %description -n %{libname}
 Library for reading public transport information
