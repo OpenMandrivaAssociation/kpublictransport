@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Library for reading public transport information
 Name:		kpublictransport
-Version:	21.08.0
+Version:	21.08.1
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
