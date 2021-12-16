@@ -19,6 +19,9 @@ BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(protobuf)
 BuildRequires:	cmake
 BuildRequires:	ninja
+# For QCH format docs
+BuildRequires: doxygen
+BuildRequires: qt5-assistant
 
 %description
 Public transport application for Plasma
