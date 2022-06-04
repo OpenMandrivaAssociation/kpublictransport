@@ -6,7 +6,7 @@
 Summary:	Library for reading public transport information
 Name:		kpublictransport
 Version:	22.04.1
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://kde.org/
@@ -43,6 +43,7 @@ Library for reading public transport information
 %package -n %{devname}
 Summary:	Development files for %{libname}
 Requires:	%{libname} = %{EVRD}
+Requires:	pkgconfig(zlib)
 
 %description -n %{devname}
 Development files for %{libname}
