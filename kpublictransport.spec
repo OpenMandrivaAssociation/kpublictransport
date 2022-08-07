@@ -5,7 +5,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Library for reading public transport information
 Name:		kpublictransport
-Version:	22.04.2
+Version:	22.07.90
 Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -50,8 +50,6 @@ Development files for %{libname}
 
 %files -n %{devname}
 %{_includedir}/KPublicTransport
-%{_includedir}/kpublictransport
-%{_includedir}/kpublictransport_version.h
 %{_libdir}/cmake/KPublicTransport
 %{_libdir}/libKPublicTransport.so
 %doc %{_docdir}/qt5/*.{qch,tags}
