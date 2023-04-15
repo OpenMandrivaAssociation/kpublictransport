@@ -5,8 +5,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Library for reading public transport information
 Name:		kpublictransport
-Version:	22.12.3
-Release:	2
+Version:	23.03.90
+Release:	1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://kde.org/
@@ -37,8 +37,10 @@ Library for reading public transport information
 
 %files -n %{libname}
 %{_libdir}/libKPublicTransport.so.*
+%{_libdir}/libKPublicTransportOnboard.so.*
 %{_libdir}/qt5/qml/org/kde/kpublictransport
 %{_datadir}/qlogging-categories5/org_kde_kpublictransport.categories
+%{_datadir}/qlogging-categories5/org_kde_kpublictransport_onboard.categories
 
 %package -n %{devname}
 Summary:	Development files for %{libname}
@@ -52,6 +54,7 @@ Development files for %{libname}
 %{_includedir}/KPublicTransport
 %{_libdir}/cmake/KPublicTransport
 %{_libdir}/libKPublicTransport.so
+%{_libdir}/libKPublicTransportOnboard.so
 %doc %{_docdir}/qt5/*.{qch,tags}
 
 %prep
