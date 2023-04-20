@@ -16,6 +16,7 @@ BuildRequires:	cmake(Qt5Quick)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(KF5NetworkManagerQt)
+BuildRequires:	cmake(I18n)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(protobuf)
 BuildRequires:	cmake
