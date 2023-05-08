@@ -2,11 +2,12 @@
 %define libname %mklibname KPublicTransport
 %define devname %mklibname -d KPublicTransport
 
-%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
+%define stable %([ "$(echo %{version} |cut -d. -f3)" -ge 80 ] && echo -n un; echo -n stable)
+
 Summary:	Library for reading public transport information
 Name:		kpublictransport
 Version:	23.04.0
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://kde.org/
@@ -19,14 +20,14 @@ BuildRequires:	cmake(KF5NetworkManagerQt)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(protobuf)
-BuildRequires:	cmake
-BuildRequires:	ninja
+BuildRequires:	osmctools
+Requires:	osmctools
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: qt5-assistant
 
 %description
-Public transport application for Plasma
+Public transport application for Plasma.
 
 %package -n %{libname}
 Summary:	Library for reading public transport information
@@ -35,7 +36,7 @@ Group:		System/Libraries
 %rename %mklibname KPublicTransport 21
 
 %description -n %{libname}
-Library for reading public transport information
+Library for reading public transport information.
 
 %files -n %{libname}
 %{_libdir}/libKPublicTransport.so.*
@@ -50,7 +51,7 @@ Requires:	%{libname} = %{EVRD}
 Requires:	pkgconfig(zlib)
 
 %description -n %{devname}
-Development files for %{libname}
+Development files for %{libname}.
 
 %files -n %{devname}
 %{_includedir}/KPublicTransport
