@@ -7,7 +7,7 @@
 Summary:	Library for reading public transport information
 Name:		kpublictransport
 Version:	23.08.4
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://kde.org/
