@@ -7,7 +7,7 @@
 Summary:	Library for reading public transport information
 Name:		kpublictransport
 Version:	23.08.5
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
 Url:		http://kde.org/
@@ -16,6 +16,8 @@ BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Quick)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5Sql)
+BuildRequires:	cmake(Qt5Help)
 BuildRequires:	cmake(KF5NetworkManagerQt)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	pkgconfig(zlib)
