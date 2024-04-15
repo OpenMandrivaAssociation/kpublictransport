@@ -9,7 +9,7 @@
 
 Summary:	Library for reading public transport information
 Name:		plasma6-kpublictransport
-Version:	24.02.1
+Version:	24.02.2
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
