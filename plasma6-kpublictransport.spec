@@ -9,7 +9,7 @@
 
 Summary:	Library for reading public transport information
 Name:		plasma6-kpublictransport
-Version:	24.05.2
+Version:	24.08.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -45,7 +45,7 @@ Group:		System/Libraries
 %description -n %{libname}
 Library for reading public transport information.
 
-%files -n %{libname}
+%files -n %{libname} -f kpublictransport.lang
 %{_libdir}/libKPublicTransport.so.*
 %{_libdir}/libKPublicTransportOnboard.so.*
 %{_libdir}/qt6/qml/org/kde/kpublictransport
@@ -77,3 +77,4 @@ Development files for %{libname}.
 
 %install
 %ninja_install -C build
+%find_lang kpublictransport
