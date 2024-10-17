@@ -10,7 +10,7 @@ Version:	23.08.5
 Release:	2
 Group:		Graphical desktop/KDE
 License:	GPLv2+
-Url:		http://kde.org/
+Url:		https://kde.org/
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Quick)
