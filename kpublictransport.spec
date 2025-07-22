@@ -9,7 +9,7 @@
 
 Summary:	Library for reading public transport information
 Name:		kpublictransport
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -32,6 +32,11 @@ Requires:	osmctools
 # For QCH format docs
 BuildRequires: doxygen
 BuildRequires: cmake(Qt6ToolsTools)
+
+%rename plasma6-kpublictransport
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
 
 %description
 Public transport application for Plasma.
@@ -65,16 +70,3 @@ Development files for %{libname}.
 %{_libdir}/cmake/KPublicTransport
 %{_libdir}/libKPublicTransport.so
 %{_libdir}/libKPublicTransportOnboard.so
-
-%prep
-%autosetup -p1 -n kpublictransport-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja_build -C build
-
-%install
-%ninja_install -C build
-%find_lang kpublictransport
