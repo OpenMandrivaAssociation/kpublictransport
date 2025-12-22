@@ -22,6 +22,7 @@ Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/kpubli
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6Quick)
 BuildRequires:	cmake(Qt6Test)
+BuildRequires:	cmake(Qt6Location)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(KF6NetworkManagerQt)
 BuildRequires:  cmake(KF6KirigamiAddons)
