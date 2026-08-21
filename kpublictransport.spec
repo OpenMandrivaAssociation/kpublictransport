@@ -9,7 +9,7 @@
 
 Summary:	Library for reading public transport information
 Name:		kpublictransport
-Version:	26.04.3
+Version:	26.08.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2+
@@ -72,3 +72,5 @@ Development files for %{libname}.
 %{_libdir}/cmake/KPublicTransport
 %{_libdir}/libKPublicTransport.so
 %{_libdir}/libKPublicTransportOnboard.so
+%{_qtdir}/metatypes/qt6kpublictransport_metatypes.json
+%{_qtdir}/metatypes/qt6kpublictransportonboard_metatypes.json
